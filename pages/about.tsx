@@ -1,5 +1,4 @@
 import React from "react";
-import { useRouter } from "next/router";
 import Image from 'next/image'
 
 import { Layout, Container } from "../components";
@@ -9,10 +8,9 @@ import { StyledAbout } from "../components/styles/about.styles";
  * About page `/about`
  */
 const About = () => {
-  const { pathname } = useRouter();
   return (
     <Layout
-      pathname={pathname}
+      pathname={"/about"}
       pageTitle="About"
       pageDescription="About page of Peacock starter by Victor Ofoegbu, Product Designer and Frontend Software Engineer in Nigeria"
     >
@@ -20,7 +18,7 @@ const About = () => {
         <Container width="narrow">
           <div className="postContent">
             <div className="avatarImage">
-              <Image src="/images/avatar.jpg" width={200} height={200} />
+              <Image src="/images/avatar.jpg" width={200} height={200} alt="Victor Ofoegbu" />
             </div>
             <p>
               I'm{" "}

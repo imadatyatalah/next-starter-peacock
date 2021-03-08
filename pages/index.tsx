@@ -1,12 +1,10 @@
 import React, { FC } from "react";
-import { useRouter } from "next/router";
 
 import { Layout, Container, Cards } from "../components";
 import { StyledIndexPage } from "../components/styles/home.styles";
 import { getContentList } from "../lib/content";
 import DesignCode from "../components/design-code";
 import ExperimentsSection from "../components/experiments";
-import Link from "next/link";
 
 /**
  * Index page `/index`
@@ -14,9 +12,8 @@ import Link from "next/link";
 
 //@ts-ignore
 const Index: FC = ({ selectedWorks }) => {
-  const { pathname } = useRouter();
   return (
-    <Layout pathname={pathname} pageTitle="Nextjs Starter Peacock">
+    <Layout pathname={"/"} pageTitle="Nextjs Starter Peacock">
       <StyledIndexPage>
         <Container>
           <Cards data={selectedWorks} basePath="works" />
